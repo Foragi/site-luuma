@@ -1,0 +1,20 @@
+# Gerados e dependências
+node_modules/
+dist/
+.next/
+
+# Configurações e segredos locais
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Arquivos locais do workspace
+.agents/
+tmp/
+*.log
+.DS_Store
+Thumbs.db
+
+# Vídeos de origem ainda não usados pelas páginas
+assets/videos/
