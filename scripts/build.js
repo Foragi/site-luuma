@@ -49,6 +49,12 @@ for (const htmlFile of htmlFiles) {
   for (const match of html.matchAll(/(?:href|src|poster)=["']([^"']+)["']/gi)) {
     resolveLocalTarget(match[1], htmlFile);
   }
+  for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/gi)) {
+    for (const candidate of match[1].split(",")) {
+      const source = candidate.trim().split(/\s+/, 1)[0];
+      if (source) resolveLocalTarget(source, htmlFile);
+    }
+  }
 }
 
 for (const cssFile of [...filesToCopy].filter((file) => file.endsWith(".css"))) {

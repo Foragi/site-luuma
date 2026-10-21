@@ -25,8 +25,20 @@
     if (!frame) frame = window.requestAnimationFrame(update);
   };
 
-  window.addEventListener('scroll', scheduleUpdate, { passive: true });
-  window.addEventListener('resize', scheduleUpdate, { passive: true });
-  reduceMotion.addEventListener?.('change', scheduleUpdate);
+  const setListeners = (enabled) => {
+    const method = enabled ? 'addEventListener' : 'removeEventListener';
+    window[method]('scroll', scheduleUpdate, { passive: true });
+    window[method]('resize', scheduleUpdate, { passive: true });
+  };
+
+  setListeners(!reduceMotion.matches);
+  reduceMotion.addEventListener?.('change', (event) => {
+    setListeners(!event.matches);
+    if (event.matches && frame) {
+      window.cancelAnimationFrame(frame);
+      frame = 0;
+    }
+    scheduleUpdate();
+  });
   update();
 })();

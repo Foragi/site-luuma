@@ -426,7 +426,7 @@ address { font-style: normal;
   background: rgba(0,0,0,.34);
 }
 
-.full-image > img { position: absolute;
+.full-image > picture > img { position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;

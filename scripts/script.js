@@ -1,15 +1,18 @@
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-const lenis = new Lenis({
-  lerp: 0.12,
-  anchors: { offset: -88 },
-});
-
 gsap.registerPlugin(ScrollTrigger);
 
-lenis.on("scroll", ScrollTrigger.update);
-gsap.ticker.add((time) => lenis.raf(time * 1000));
-gsap.ticker.lagSmoothing(0);
+let lenis;
+if (!reducedMotion.matches) {
+  lenis = new Lenis({
+    lerp: 0.12,
+    anchors: { offset: -88 },
+  });
+
+  lenis.on("scroll", ScrollTrigger.update);
+  gsap.ticker.add((time) => lenis.raf(time * 1000));
+  gsap.ticker.lagSmoothing(0);
+}
 
 document.querySelectorAll("[data-squeeze-carousel]").forEach((carousel) => {
   const panels = [...carousel.querySelectorAll("[role='tab']")];
@@ -87,9 +90,8 @@ if (!reducedMotion.matches) {
   });
 
   const parallaxImages = [
-    ".hero-image",
     ".intro-image img",
-    ".full-image > img",
+    ".full-image img",
     ".story-photo img",
     ".visit-image img",
   ];
@@ -116,12 +118,3 @@ if (!reducedMotion.matches) {
     );
   });
 }
-
-document.querySelectorAll("img[loading='lazy']").forEach((image) => {
-  image.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
-});
-window.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
-
-reducedMotion.addEventListener?.("change", (event) => {
-  if (event.matches) window.location.reload();
-});
