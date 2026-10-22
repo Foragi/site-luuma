@@ -72,9 +72,15 @@ for (const dependency of ["gsap", "lenis"]) {
 }
 
 if (fs.existsSync(output)) {
-  if (!fs.existsSync(outputMarker)) {
-    throw new Error("A pasta dist já existe e não foi criada por este build; ela foi preservada.");
+  const outputIsEmpty = fs.readdirSync(output).length === 0;
+  const isVercelBuild =
+    process.env.VERCEL === "1" || Boolean(process.env.VERCEL_ENV) || Boolean(process.env.VERCEL_URL);
+
+  if (!fs.existsSync(outputMarker) && !outputIsEmpty && !isVercelBuild) {
+    throw new Error("A pasta dist contém arquivos sem o marcador deste build; ela foi preservada.");
   }
+
+  // Vercel's configured output directory belongs to this build and may already exist.
   fs.rmSync(output, { recursive: true, force: true });
 }
 
