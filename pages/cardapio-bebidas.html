@@ -23,8 +23,8 @@
       --cream: var(--paper);
       --gold: var(--accent);
       --coral: var(--accent);
-      --serif: "Sweet Sans Pro", Arial, sans-serif;
-      --sans: "Sweet Sans Pro", Arial, sans-serif;
+      --serif: "Manrope", Arial, sans-serif;
+      --sans: "Manrope", Arial, sans-serif;
       --display: var(--serif);
       --body: var(--sans);
       --gutter: clamp(1rem, 4vw, 3rem);
@@ -168,6 +168,7 @@
   </style>
   <link rel="icon" type="image/png" href="../assets/iconluuma.png">
   <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/mobile.css">
 </head>
 <body>
       <header class="site-header">
@@ -175,7 +176,9 @@
       <img class="brand-mark" src="../assets/iconluuma.png" aria-hidden="true" width="150" height="150">
       <span class="brand-name">LUUMA<span>RESTAURANTE &amp; CHOPERIA</span></span>
     </a>
-    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+    <button class="menu-toggle" type="button" data-mobile-menu-toggle aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+    </button>    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
       <a href="index.html#experiencia">Buffet</a>
       <a href="index.html#cardapio">Cardápio</a>
       <a href="index.html#encontros">Nossas op&ccedil;&otilde;es</a>
@@ -227,17 +230,48 @@
             <li class="menu-item"><span class="item-name">Guaraná Zero</span><span class="item-price">R$ 6,60</span></li>
             <li class="menu-item"><span class="item-name">Pepsi Black</span><span class="item-price">R$ 6,60</span></li>
           </ul></div>
+          <br>
           <div class="subsection"><h3 class="subsection-title">Sucos Del Valle</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Uva</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Pêssego</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Uva</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Pêssego</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Goiaba</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Limonada Tradicional</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Limonada Pink</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Limonada Tropical</span><span class="item-price">R$ 6,50</span></li>
           </ul></div>
+          <br>
           <div class="subsection"><h3 class="subsection-title">H2OH</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Citrus</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Limoneto</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Limoneto</span><span class="item-price">R$ 7,00</span></li>
           </ul></div>
+          <br>
           <div class="subsection"><h3 class="subsection-title">Sucos naturais · R$ 12,00</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Laranja</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Abacaxi</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Caju</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Morango</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Acerola</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Melancia</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Laranja com acerola</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Laranja com caju</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Limão com morango</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Limão com laranja</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Abacaxi com hortelã</span><span class="item-price">R$ 12,00</span></li>
-          </ul><p class="note">Sucos com leite: R$ 15,00 · escolha o sabor.</p></div>
+            <li class="menu-item"><span class="item-name">Laranja</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Abacaxi</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Caju</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Morango</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Acerola</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Melancia</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Laranja com acerola</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Laranja com caju</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão com morango</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão com laranja</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Abacaxi com hortelã</span><span class="item-price">R$ 12,00</span></li>
+          </ul><p class="note">Sucos com leite: R$ 15,00 · escolha o sabor.<br><br></p></div>
+          <br>
           <div class="subsection"><h3 class="subsection-title">Águas e energéticos</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Água</span><span class="item-price">R$ 4,00</span></li><li class="menu-item"><span class="item-name">Água com gás</span><span class="item-price">R$ 5,00</span></li><li class="menu-item"><span class="item-name">Tônica</span><span class="item-price">R$ 6,00</span></li><li class="menu-item"><span class="item-name">Tônica zero</span><span class="item-price">R$ 6,00</span></li><li class="menu-item"><span class="item-name">Red Bull</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Red Bull sabores</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Monster</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Água</span><span class="item-price">R$ 4,00</span></li>
+            <li class="menu-item"><span class="item-name">Água com gás</span><span class="item-price">R$ 5,00</span></li>
+            <li class="menu-item"><span class="item-name">Tônica</span><span class="item-price">R$ 6,00</span></li>
+            <li class="menu-item"><span class="item-name">Tônica zero</span><span class="item-price">R$ 6,00</span></li>
+            <li class="menu-item"><span class="item-name">Red Bull</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Red Bull sabores</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Monster</span><span class="item-price">R$ 15,00</span></li>
           </ul></div>
         </section>
       </div>
@@ -268,5 +302,6 @@
       gsap.fromTo('.hero-content > *', { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .85, stagger: .1, ease: 'power3.out', delay: .12 });
     }
   </script>
+  <script defer src="../assets/js/mobile-menu.js"></script>
 </body>
 </html>

@@ -21,16 +21,16 @@ As categorias são links de navegação por âncora até cada seção. Não há 
 
 ## 2. Tipografia
 
-O cardápio reutiliza a família Sweet Sans Pro definida no site principal (`styles/styles.css`), com os mesmos arquivos de fonte e pesos. A hierarquia do hero também segue a página inicial: título grande, peso 438, entrelinha curta e tracking negativo.
+O cardápio reutiliza a família Manrope definida no site principal (`styles/styles.css`), com os mesmos arquivos de fonte e pesos. A hierarquia do hero também segue a página inicial: título grande, peso 438, entrelinha curta e tracking negativo.
 
 | Papel | Família/fallback | Escala | Peso | Altura de linha | Tracking |
 |---|---|---:|---:|---:|---:|
-| Título do hero | `Sweet Sans Pro`, Arial, sans-serif | `clamp(63px, 9vw, 135px)` | 438 | 0.88 | `-0.075em` |
-| Título de seção | `Sweet Sans Pro`, Arial, sans-serif | `clamp(1.35rem, 2.4vw, 1.8rem)` | 700 | 1.08 | 0 |
-| Nome do prato | `Sweet Sans Pro`, Arial, sans-serif | 0.72–0.76rem | 700 | 1.3 | 0 |
-| Descrição | `Sweet Sans Pro`, Arial, sans-serif | 0.65–0.68rem | 400 | 1.45 | 0 |
-| Preço | `Sweet Sans Pro`, Arial, sans-serif | 0.65–0.78rem | 700 | 1.2 | 0 |
-| Rótulos e metadados | `Sweet Sans Pro`, Arial, sans-serif | 0.62–0.75rem | 500–600 | 1.35 | `0.02em` |
+| Título do hero | `Manrope`, Arial, sans-serif | `clamp(63px, 9vw, 135px)` | 438 | 0.88 | `-0.075em` |
+| Título de seção | `Manrope`, Arial, sans-serif | `clamp(1.35rem, 2.4vw, 1.8rem)` | 700 | 1.08 | 0 |
+| Nome do prato | `Manrope`, Arial, sans-serif | 0.72–0.76rem | 700 | 1.3 | 0 |
+| Descrição | `Manrope`, Arial, sans-serif | 0.65–0.68rem | 400 | 1.45 | 0 |
+| Preço | `Manrope`, Arial, sans-serif | 0.65–0.78rem | 700 | 1.2 | 0 |
+| Rótulos e metadados | `Manrope`, Arial, sans-serif | 0.62–0.75rem | 500–600 | 1.35 | `0.02em` |
 
 ## 3. Tokens CSS
 
@@ -47,8 +47,8 @@ O cardápio reutiliza a família Sweet Sans Pro definida no site principal (`sty
   --color-error: #a33a32;
   --color-success: #3f6b50;
 
-  --font-display: "Sweet Sans Pro", Arial, sans-serif;
-  --font-body: "Sweet Sans Pro", Arial, sans-serif;
+  --font-display: "Manrope", Arial, sans-serif;
+  --font-body: "Manrope", Arial, sans-serif;
   --text-xs: .6875rem;
   --text-sm: .8125rem;
   --text-base: 1rem;
@@ -111,7 +111,7 @@ Breakpoints mobile-first: `600px` e `900px`; conteúdo amplo limitado por `--con
 | Navegação | Faixa de categorias com categoria destacada em carvão e células sobre papel | Links de âncora para as seções; foco visível e rolagem suave, respeitando movimento reduzido |
 | Badge | Círculo de contorno para informação dietética/alergênica | Exibir apenas os identificadores documentados no PDF; acompanhar ícone com texto alternativo/legenda |
 | Modal | Não aparece no fluxo de leitura essencial | Não usar |
-| Hero | Foto em tela cheia, título Sweet Sans Pro grande, metadados e chamada para explorar | Imagem com texto alternativo; chamada leva à primeira categoria |
+| Hero | Foto em tela cheia, título Manrope grande, metadados e chamada para explorar | Imagem com texto alternativo; chamada leva à primeira categoria |
 | Painel de apoio | Superfície papel, texto carvão e linhas cinza | Pode acolher nota editorial; não usar como filtro interativo |
 
 ## 6. Responsividade

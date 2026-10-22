@@ -23,8 +23,8 @@
       --cream: var(--paper);
       --gold: var(--accent);
       --coral: var(--accent);
-      --serif: "Sweet Sans Pro", Arial, sans-serif;
-      --sans: "Sweet Sans Pro", Arial, sans-serif;
+      --serif: "Manrope", Arial, sans-serif;
+      --sans: "Manrope", Arial, sans-serif;
       --display: var(--serif);
       --body: var(--sans);
       --gutter: clamp(1rem, 4vw, 3rem);
@@ -168,6 +168,7 @@
   </style>
   <link rel="icon" type="image/png" href="../assets/iconluuma.png">
   <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/mobile.css">
 </head>
 <body>
       <header class="site-header">
@@ -175,7 +176,9 @@
       <img class="brand-mark" src="../assets/iconluuma.png" aria-hidden="true" width="150" height="150">
       <span class="brand-name">LUUMA<span>RESTAURANTE &amp; CHOPERIA</span></span>
     </a>
-    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+    <button class="menu-toggle" type="button" data-mobile-menu-toggle aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+    </button>    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
       <a href="index.html#experiencia">Buffet</a>
       <a href="index.html#cardapio">Cardápio</a>
       <a href="index.html#encontros">Nossas op&ccedil;&otilde;es</a>
@@ -227,6 +230,7 @@
           <div class="subsection"><h3 class="subsection-title">Pratos para 2 pessoas</h3><ul class="items">
             <li class="menu-item"><span class="item-name">Caldeirada de frutos do mar</span><span class="item-price">R$ 160,00</span><p class="item-description">500 g de cação, camarão, marisco, lula, pirão e arroz.</p></li>
             <li class="menu-item"><span class="item-name">Moqueca Baiana</span><span class="item-price">R$ 99,99</span><p class="item-description">500 g de cação, leite de coco, azeite de dendê, pirão e arroz.</p></li>
+            <li class="menu-item"><span class="item-name">Picanha na Brasa</span><span class="item-price">R$ 120,00</span><p class="item-description">600 g de picanha, arroz, feijão, fritas, banana empanada, vinagrete e farofa.</p></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Massas</h3><ul class="items">
             <li class="menu-item"><span class="item-name">Nhoque</span><span class="item-price">R$ 40,00</span><p class="item-description">Massa de batata; molho branco, ao sugo ou à bolonhesa.</p></li>
@@ -262,5 +266,6 @@
       gsap.fromTo('.hero-content > *', { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .85, stagger: .1, ease: 'power3.out', delay: .12 });
     }
   </script>
+  <script defer src="../assets/js/mobile-menu.js"></script>
 </body>
 </html>

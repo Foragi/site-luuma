@@ -23,8 +23,8 @@
       --cream: var(--paper);
       --gold: var(--accent);
       --coral: var(--accent);
-      --serif: "Sweet Sans Pro", Arial, sans-serif;
-      --sans: "Sweet Sans Pro", Arial, sans-serif;
+      --serif: "Manrope", Arial, sans-serif;
+      --sans: "Manrope", Arial, sans-serif;
       --display: var(--serif);
       --body: var(--sans);
       --gutter: clamp(1rem, 4vw, 3rem);
@@ -168,6 +168,7 @@
   </style>
   <link rel="icon" type="image/png" href="../assets/iconluuma.png">
   <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/mobile.css">
 </head>
 <body>
       <header class="site-header">
@@ -175,7 +176,9 @@
       <img class="brand-mark" src="../assets/iconluuma.png" aria-hidden="true" width="150" height="150">
       <span class="brand-name">LUUMA<span>RESTAURANTE &amp; CHOPERIA</span></span>
     </a>
-    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+    <button class="menu-toggle" type="button" data-mobile-menu-toggle aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+    </button>    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
       <a href="index.html#experiencia">Buffet</a>
       <a href="index.html#cardapio">Cardápio</a>
       <a href="index.html#encontros">Nossas op&ccedil;&otilde;es</a>
@@ -250,51 +253,119 @@
             <li class="menu-item"><span class="item-name">Pepsi Black</span><span class="item-price">R$ 6,60</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Sucos Del Valle</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Uva</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Pêssego</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Uva</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Pêssego</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 6,50</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">H2OH</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Citrus</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Limoneto</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Citrus</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Limoneto</span><span class="item-price">R$ 7,00</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Sucos naturais · R$ 12,00</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Laranja</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Abacaxi</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Caju</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Morango</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Acerola</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Melancia</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Laranja com acerola</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Laranja com caju</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Limão com morango</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Limão com laranja</span><span class="item-price">R$ 12,00</span></li><li class="menu-item"><span class="item-name">Abacaxi com hortelã</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Laranja</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Abacaxi</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Manga</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Caju</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Maracujá</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Morango</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Acerola</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Melancia</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Laranja com acerola</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Laranja com caju</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão com morango</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Limão com laranja</span><span class="item-price">R$ 12,00</span></li>
+            <li class="menu-item"><span class="item-name">Abacaxi com hortelã</span><span class="item-price">R$ 12,00</span></li>
           </ul><p class="note">Sucos com leite: R$ 15,00 · escolha o sabor.</p></div>
           <div class="subsection"><h3 class="subsection-title">Águas e energéticos</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Água</span><span class="item-price">R$ 4,00</span></li><li class="menu-item"><span class="item-name">Água com gás</span><span class="item-price">R$ 5,00</span></li><li class="menu-item"><span class="item-name">Tônica</span><span class="item-price">R$ 6,00</span></li><li class="menu-item"><span class="item-name">Tônica zero</span><span class="item-price">R$ 6,00</span></li><li class="menu-item"><span class="item-name">Red Bull</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Red Bull sabores</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Monster</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Água</span><span class="item-price">R$ 4,00</span></li>
+            <li class="menu-item"><span class="item-name">Água com gás</span><span class="item-price">R$ 5,00</span></li>
+            <li class="menu-item"><span class="item-name">Tônica</span><span class="item-price">R$ 6,00</span></li>
+            <li class="menu-item"><span class="item-name">Tônica zero</span><span class="item-price">R$ 6,00</span></li>
+            <li class="menu-item"><span class="item-name">Red Bull</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Red Bull sabores</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Monster</span><span class="item-price">R$ 15,00</span></li>
           </ul></div>
         </section>
 
         <section class="menu-section" id="sobremesas" aria-labelledby="sobremesas-title">
           <div class="section-heading"><h2 id="sobremesas-title">Sobremesas</h2></div><ul class="items">
-            <li class="menu-item"><span class="item-name">Pudim</span><span class="item-price">R$ 8,00</span></li><li class="menu-item"><span class="item-name">Bolo de abacaxi com coco</span><span class="item-price">R$ 10,00</span></li><li class="menu-item"><span class="item-name">Torta holandesa</span><span class="item-price">R$ 14,00</span></li><li class="menu-item"><span class="item-name">Torta de limão</span><span class="item-price">R$ 14,00</span></li><li class="menu-item"><span class="item-name">Cheesecake</span><span class="item-price">R$ 14,00</span></li><li class="menu-item"><span class="item-name">Banoffee</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Pudim</span><span class="item-price">R$ 8,00</span></li>
+            <li class="menu-item"><span class="item-name">Bolo de abacaxi com coco</span><span class="item-price">R$ 10,00</span></li>
+            <li class="menu-item"><span class="item-name">Torta holandesa</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Torta de limão</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Cheesecake</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Banoffee</span><span class="item-price">R$ 14,00</span></li>
           </ul>
         </section>
 
         <section class="menu-section" id="cafe" aria-labelledby="cafe-title">
           <div class="section-heading"><h2 id="cafe-title">Café</h2></div><ul class="items">
-            <li class="menu-item"><span class="item-name">Expresso</span><span class="item-price">R$ 6,50</span></li><li class="menu-item"><span class="item-name">Café com leite</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Café com leite · grande</span><span class="item-price">R$ 8,00</span></li><li class="menu-item"><span class="item-name">Drip coffee</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Macchiatto</span><span class="item-price">R$ 7,00</span></li><li class="menu-item"><span class="item-name">Mocha</span><span class="item-price">R$ 11,00</span></li><li class="menu-item"><span class="item-name">Cappuccino</span><span class="item-price">R$ 8,00</span></li><li class="menu-item"><span class="item-name">Cappuccino ice</span><span class="item-price">R$ 11,00</span></li><li class="menu-item"><span class="item-name">Chocolate</span><span class="item-price">R$ 11,00</span></li><li class="menu-item"><span class="item-name">Ice chocolate</span><span class="item-price">R$ 11,00</span></li>
+            <li class="menu-item"><span class="item-name">Expresso</span><span class="item-price">R$ 6,50</span></li>
+            <li class="menu-item"><span class="item-name">Café com leite</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Café com leite · grande</span><span class="item-price">R$ 8,00</span></li>
+            <li class="menu-item"><span class="item-name">Drip coffee</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Macchiatto</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Mocha</span><span class="item-price">R$ 11,00</span></li>
+            <li class="menu-item"><span class="item-name">Cappuccino</span><span class="item-price">R$ 8,00</span></li>
+            <li class="menu-item"><span class="item-name">Cappuccino ice</span><span class="item-price">R$ 11,00</span></li>
+            <li class="menu-item"><span class="item-name">Chocolate</span><span class="item-price">R$ 11,00</span></li>
+            <li class="menu-item"><span class="item-name">Ice chocolate</span><span class="item-price">R$ 11,00</span></li>
           </ul></section>
 
         <section class="menu-section" id="doses" aria-labelledby="doses-title">
           <div class="section-heading"><h2 id="doses-title">Doses, drinks &amp; cervejas</h2></div>
           <div class="subsection"><h3 class="subsection-title">Doses</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Smirnoff</span><span class="item-price">R$ 20,00</span></li><li class="menu-item"><span class="item-name">Absolut</span><span class="item-price">R$ 30,00</span></li><li class="menu-item"><span class="item-name">Campari</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Tequila</span><span class="item-price">R$ 30,00</span></li><li class="menu-item"><span class="item-name">Jack Daniel’s</span><span class="item-price">R$ 35,00</span></li><li class="menu-item"><span class="item-name">Red Label</span><span class="item-price">R$ 30,00</span></li><li class="menu-item"><span class="item-name">Black Label</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Licor 43</span><span class="item-price">R$ 35,00</span></li><li class="menu-item"><span class="item-name">Licor de doce de leite</span><span class="item-price">R$ 35,00</span></li><li class="menu-item"><span class="item-name">Cachaças: Imperial Azul, de Cereja, de Canela, Ouro, Prata, Seleta e Salinas</span><span class="item-price">R$ 10,00 cada</span></li>
+            <li class="menu-item"><span class="item-name">Smirnoff</span><span class="item-price">R$ 20,00</span></li>
+            <li class="menu-item"><span class="item-name">Absolut</span><span class="item-price">R$ 30,00</span></li>
+            <li class="menu-item"><span class="item-name">Campari</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Tequila</span><span class="item-price">R$ 30,00</span></li>
+            <li class="menu-item"><span class="item-name">Jack Daniel’s</span><span class="item-price">R$ 35,00</span></li>
+            <li class="menu-item"><span class="item-name">Red Label</span><span class="item-price">R$ 30,00</span></li>
+            <li class="menu-item"><span class="item-name">Black Label</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Licor 43</span><span class="item-price">R$ 35,00</span></li>
+            <li class="menu-item"><span class="item-name">Licor de doce de leite</span><span class="item-price">R$ 35,00</span></li>
+            <li class="menu-item"><span class="item-name">Cachaças: Imperial Azul, de Cereja, de Canela, Ouro, Prata, Seleta e Salinas</span><span class="item-price">R$ 10,00 cada</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Drinks</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Aperol Spritz</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Sex on the Beach</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Piña Colada</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Gin Tropical</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Gin Melancia</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Gin &amp; Tônica</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Negroni</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Campari Tônica</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Soda Italiana · romã ou maçã verde</span><span class="item-price">R$ 25,00</span></li>
+            <li class="menu-item"><span class="item-name">Aperol Spritz</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Sex on the Beach</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Piña Colada</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Gin Tropical</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Gin Melancia</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Gin &amp; Tônica</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Negroni</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Campari Tônica</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Soda Italiana · romã ou maçã verde</span><span class="item-price">R$ 25,00</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Cerveja long neck</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Heineken</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Heineken zero</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Corona</span><span class="item-price">R$ 15,00</span></li><li class="menu-item"><span class="item-name">Corona zero</span><span class="item-price">R$ 14,00</span></li><li class="menu-item"><span class="item-name">Stella Artois</span><span class="item-price">R$ 14,00</span></li><li class="menu-item"><span class="item-name">Stella Artois sem glúten</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Heineken</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Heineken zero</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Corona</span><span class="item-price">R$ 15,00</span></li>
+            <li class="menu-item"><span class="item-name">Corona zero</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Stella Artois</span><span class="item-price">R$ 14,00</span></li>
+            <li class="menu-item"><span class="item-name">Stella Artois sem glúten</span><span class="item-price">R$ 14,00</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Caipirinhas artesanais</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Imperial Limão Tradicional · cachaça azul</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Frutas Vermelhas · cachaça de cereja</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Jorge Amado · cachaça de canela</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Imperial Limão Tradicional · cachaça azul</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Frutas Vermelhas · cachaça de cereja</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Jorge Amado · cachaça de canela</span><span class="item-price">R$ 40,00</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Batidas</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Cachaça · morango, maracujá ou coco</span><span class="item-price">R$ 35,00</span></li><li class="menu-item"><span class="item-name">Vodka · morango, maracujá ou coco</span><span class="item-price">R$ 40,00</span></li><li class="menu-item"><span class="item-name">Espanhola</span><span class="item-price">R$ 35,00</span></li>
+            <li class="menu-item"><span class="item-name">Cachaça · morango, maracujá ou coco</span><span class="item-price">R$ 35,00</span></li>
+            <li class="menu-item"><span class="item-name">Vodka · morango, maracujá ou coco</span><span class="item-price">R$ 40,00</span></li>
+            <li class="menu-item"><span class="item-name">Espanhola</span><span class="item-price">R$ 35,00</span></li>
           </ul></div>
           <div class="subsection"><h3 class="subsection-title">Caipirinhas</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Cachaça</span><span class="item-price">R$ 35,00</span><p class="item-description">Caju, limão, abacaxi, morango, tangerina com pimenta, limão siciliano com gengibre, Caiçara ou morango com maracujá.</p></li><li class="menu-item"><span class="item-name">Saquê</span><span class="item-price">R$ 35,00</span><p class="item-description">Sabores listados acima.</p></li><li class="menu-item"><span class="item-name">Vodka</span><span class="item-price">R$ 40,00</span><p class="item-description">Sabores listados acima.</p></li><li class="menu-item"><span class="item-name">Absolut</span><span class="item-price">R$ 50,00</span><p class="item-description">Sabores listados acima.</p></li>
+            <li class="menu-item"><span class="item-name">Cachaça</span><span class="item-price">R$ 35,00</span><p class="item-description">Caju, limão, abacaxi, morango, tangerina com pimenta, limão siciliano com gengibre, Caiçara ou morango com maracujá.</p></li>
+            <li class="menu-item"><span class="item-name">Saquê</span><span class="item-price">R$ 35,00</span><p class="item-description">Sabores listados acima.</p></li>
+            <li class="menu-item"><span class="item-name">Vodka</span><span class="item-price">R$ 40,00</span><p class="item-description">Sabores listados acima.</p></li>
+            <li class="menu-item"><span class="item-name">Absolut</span><span class="item-price">R$ 50,00</span><p class="item-description">Sabores listados acima.</p></li>
           </ul></div>
-          <div class="subsection"><h3 class="subsection-title">Chopp de vinho</h3><ul class="items"><li class="menu-item"><span class="item-name">Chopp de vinho · 350 ml</span><span class="item-price">R$ 12,00</span></li></ul></div>
+          <div class="subsection"><h3 class="subsection-title">Chopp de vinho</h3><ul class="items">
+            <li class="menu-item"><span class="item-name">Chopp de vinho · 350 ml</span><span class="item-price">R$ 12,00</span></li></ul></div>
         </section>
 
         <section class="menu-section" id="pratos" aria-labelledby="pratos-title">
@@ -346,7 +417,9 @@
             <li class="menu-item"><span class="item-name">Salada Luuma</span><span class="item-price">R$ 30,00</span><p class="item-description">Pão brioche, hambúrguer 120 g, queijo, alface, tomate e maionese especial.</p></li>
             <li class="menu-item"><span class="item-name">Bacon Salada Luuma</span><span class="item-price">R$ 32,00</span><p class="item-description">Pão brioche, hambúrguer 120 g, queijo, bacon, salada e maionese especial.</p></li>
           </ul><div class="subsection" id="adicionais"><h3 class="subsection-title">Adicionais</h3><ul class="items">
-            <li class="menu-item"><span class="item-name">Hambúrguer</span><span class="item-price">R$ 11,00</span></li><li class="menu-item"><span class="item-name">Fatia de queijo</span><span class="item-price">R$ 5,00</span></li><li class="menu-item"><span class="item-name">Bacon</span><span class="item-price">R$ 7,00</span></li>
+            <li class="menu-item"><span class="item-name">Hambúrguer</span><span class="item-price">R$ 11,00</span></li>
+            <li class="menu-item"><span class="item-name">Fatia de queijo</span><span class="item-price">R$ 5,00</span></li>
+            <li class="menu-item"><span class="item-name">Bacon</span><span class="item-price">R$ 7,00</span></li>
           </ul></div>
         </section>
 
@@ -399,5 +472,6 @@
       gsap.fromTo('.hero-content > *', { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .85, stagger: .1, ease: 'power3.out', delay: .12 });
     }
   </script>
+  <script defer src="../assets/js/mobile-menu.js"></script>
 </body>
 </html>
