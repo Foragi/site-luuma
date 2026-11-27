@@ -457,6 +457,21 @@ address { font-style: normal;
   padding-bottom: clamp(95px, 12vw, 170px);
 }
 
+.reveillon { padding-top: clamp(85px, 11vw, 155px);
+  padding-bottom: clamp(90px, 11vw, 155px);
+  border-top: 1px solid var(--line);
+}
+
+.reveillon-intro { margin: -22px 0 34px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: .04em;
+}
+
+.reveillon .squeeze-detail p { white-space: pre-line; }
+
+#reveillon-tab-1 img { object-position: center top; }
+
 .highlights-heading { display: flex;
   justify-content: space-between;
   align-items: start;
@@ -922,6 +937,9 @@ address { font-style: normal;
 }
 
 @media (max-width: 767px) {
+  .highlights .squeeze-panel:first-child img,
+  #reveillon-tab-1 img { object-position: center top; }
+
   .hero { min-height: 760px;
     height: 100svh;
     max-height: 940px;

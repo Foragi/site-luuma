@@ -36,6 +36,7 @@ const cardPhotos = [
 
 function addMissingMenuPhotos() {
   document.querySelectorAll('.dish-card').forEach((card) => {
+    if (card.closest('[data-no-card-photos]')) return;
     if (card.querySelector('.dish-photo')) return;
 
     const title = card.querySelector('.dish-title')?.textContent.trim() || '';

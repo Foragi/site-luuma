@@ -7,7 +7,7 @@
   <meta name="description" content="Luuma Restaurante e Choperia, em Itanhaém. Um lugar para comer bem, brindar e aproveitar bons encontros.">
   <title>Luuma Restaurante e Choperia — Itanhaém</title>
   <link rel="stylesheet" href="../node_modules/lenis/dist/lenis.css">
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css?v=20261126-7">
   <link rel="icon" type="image/png" href="../assets/iconluuma.png">
   <link rel="stylesheet" href="../styles/fonts.css">
   <link rel="stylesheet" href="../styles/mobile.css">
@@ -25,6 +25,7 @@
       <a href="#cardapio">Cardápio</a>
       <a href="#encontros">Nossas opções</a>
       <a href="#programacoes">Programa&ccedil;&otilde;es</a>
+      <a href="#reveillon">Réveillon 2027</a>
       <a href="#visite">Localização</a>
     </nav>
   </header>
@@ -89,8 +90,8 @@
           <button class="squeeze-arrow" type="button" data-squeeze-next aria-label="Pr&oacute;ximo item"></button>
         </div>
         <div class="squeeze-panels" role="tablist" aria-label="Momentos no Luuma">
-          <button class="squeeze-panel is-active" type="button" role="tab" id="highlight-tab-1" aria-selected="true" aria-controls="highlight-detail" tabindex="0" data-title="Caf&eacute; colonial" data-description="Desfrute de um delicioso café da manhã à vontade por apenas R$ 37,99! Uma mesa repleta de pães fresquinhos, bolos, frios e diversas outras opções para começar o dia com muito sabor.">
-            <picture><source type="image/webp" srcset="../assets/optimized/cafecolonial-480.webp 480w, ../assets/optimized/cafecolonial-960.webp 960w, ../assets/optimized/cafecolonial-1440.webp 1440w" sizes="(max-width: 767px) 92vw, 50vw"><img src="../assets/optimized/cafecolonial-1440.jpg" loading="lazy" width="1672" height="940"></picture><span>CAF&Eacute; DA MANH&Atilde;</span>
+          <button class="squeeze-panel is-active" type="button" role="tab" id="highlight-tab-1" aria-selected="true" aria-controls="highlight-detail" tabindex="0" data-title="Jantinhas do Luuma" data-description="Novidade no Luuma: jantinhas completas com arroz, feijão e fritas. Escolha entre strogonoff de frango, pernil, linguiça, frango crocante, isca de peixe crocante, contra acebolado ou picanha. Consulte os valores.">
+            <img src="../assets/luumajanta.jpeg" alt="Jantinha do Luuma com sete opções de proteína, servidas com arroz, feijão e fritas." loading="lazy" width="1024" height="1536"><span>NOVIDADE · JANTINHAS</span>
           </button>
           <button class="squeeze-panel" type="button" role="tab" id="highlight-tab-2" aria-selected="false" aria-controls="highlight-detail" tabindex="-1" data-title="Buffet e &agrave; la carte" data-description="Reúna a família em volta da mesa e aproveite uma experiência cheia de sabor! Sirva-se à vontade com nossas delícias ou escolha um prato individual, preparado com carinho para deixar sua refeição ainda mais especial.">
             <picture><source type="image/webp" srcset="../assets/optimized/salmao1-480.webp 480w, ../assets/optimized/salmao1-960.webp 960w, ../assets/optimized/salmao1-1440.webp 1440w, ../assets/optimized/salmao1-1920.webp 1920w" sizes="(max-width: 767px) 92vw, 50vw"><img src="../assets/optimized/salmao1-1440.jpg" loading="lazy" aria-hidden="true" width="5472" height="3648"></picture><span>ALMO&Ccedil;O</span>
@@ -100,10 +101,37 @@
           </button>
         </div>
         <div class="squeeze-detail" id="highlight-detail" role="tabpanel" aria-live="polite" aria-labelledby="highlight-tab-1">
-          <h3 data-squeeze-title>Caf&eacute; colonial</h3>
-          <p data-squeeze-description>Desfrute de um delicioso café da manhã à vontade por apenas R$ 37,99! Uma mesa repleta de pães fresquinhos, bolos, frios e diversas outras opções para começar o dia com muito sabor.</p>
+          <h3 data-squeeze-title>Jantinhas do Luuma</h3>
+          <p data-squeeze-description>Novidade no Luuma: jantinhas completas com arroz, feijão e fritas. Escolha entre strogonoff de frango, pernil, linguiça, frango crocante, isca de peixe crocante, contra acebolado ou picanha. Consulte os valores no nosso cardápio digital.</p>
         </div>
       </div>
+    </section>
+
+    <section class="reveillon section-wrap" id="reveillon" aria-labelledby="reveillon-title">
+      <div class="highlights-heading">
+        <p class="intro-kicker"><span class="kicker-line"></span> UMA VIRADA ESPECIAL NO LUUMA</p>
+        <h2 id="reveillon-title">Réveillon <em>2027.</em></h2>
+      </div>
+      <p class="reveillon-intro">31 de dezembro de 2026 · All inclusive</p>
+      <div class="squeeze-carousel" data-squeeze-carousel>
+        <div class="squeeze-controls">
+          <button class="squeeze-arrow" type="button" data-squeeze-prev aria-label="Informações de valores anteriores"></button>
+          <button class="squeeze-arrow" type="button" data-squeeze-next aria-label="Próximas informações do evento"></button>
+        </div>
+        <div class="squeeze-panels" role="tablist" aria-label="Informações do Réveillon 2027">
+          <button class="squeeze-panel is-active" type="button" role="tab" id="reveillon-tab-1" aria-selected="true" aria-controls="reveillon-detail" tabindex="0" data-title="Valores por pessoa" data-description="1º lote: R$ 500,00 por pessoa, até 15 de dezembro.&#10;2º lote: R$ 600,00 por pessoa, até 25 de dezembro.&#10;3º lote: R$ 700,00 por pessoa, a partir de 27 de dezembro.&#10;Parcelamento no cartão de crédito em até 3 vezes sem juros. Crianças até 5 anos não pagam; crianças até 10 anos pagam meia.">
+            <picture><source media="(max-width: 767px)" srcset="../assets/anonovo1.jpeg"><img src="../assets/reveilloninfo.jpeg" alt="Informações do Réveillon 2027 do Luuma e valores dos lotes por pessoa." loading="lazy" width="1600" height="900"></picture><span>VALORES E CONDIÇÕES</span>
+          </button>
+          <button class="squeeze-panel" type="button" role="tab" id="reveillon-tab-2" aria-selected="false" aria-controls="reveillon-detail" tabindex="-1" data-title="Cardápio all inclusive" data-description="Entradas: seleção de queijos e frios, caponata de berinjela, pães, torradas e patês, mini salgados, salpicão de frango e tomate-cereja, salada tropical e ceviche de manga.&#10;Pratos principais: cupim, tender ao molho de laranja e mel, chester com batatas douradas, pernil, peixe à portuguesa e filé mignon suíno ao molho de maracujá.&#10;Acompanhamentos: arrozes, maionese, farofa especial, batatas gratinadas, fritas e penne aos quatro queijos.&#10;Sobremesas: pudim, torta de limão, chocomousse e banoffee. Mesa da virada com lentilha, uvas, frutas e espumante.&#10;Bebidas inclusas: chopp Brahma, gin tônica, gin de melancia, gin tropical, Aperol, refrigerantes, sucos, água e espumante para o brinde da meia-noite.">
+            <img src="../assets/reveil.jpeg" alt="Fogos de artifício sobre a Boca da Barra de Itanhaém, com farol, praia e público comemorando o Réveillon." loading="lazy" width="1600" height="900"><span>MENU ALL INCLUSIVE</span>
+          </button>
+        </div>
+        <div class="squeeze-detail" id="reveillon-detail" role="tabpanel" aria-live="polite" aria-labelledby="reveillon-tab-1">
+          <h3 data-squeeze-title>Valores por pessoa</h3>
+          <p data-squeeze-description>1º lote: R$ 500,00 por pessoa, até 15 de dezembro. <br> 2º lote: R$ 600,00 por pessoa, até 25 de dezembro. <br> 3º lote: R$ 700,00 por pessoa, a partir de 27 de dezembro. <br> Parcelamento no cartão de crédito em até 3 vezes sem juros. Crianças até 5 anos não pagam; crianças até 10 anos pagam meia.</p>
+        </div>
+      </div>
+      <a class="text-link highlights-link" href="https://wa.me/5513996015138?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20R%C3%A9veillon%202027." target="_blank" rel="noopener noreferrer">INFORMAÇÕES E RESERVAS <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="programming section-wrap" id="programacoes" aria-labelledby="programming-title">
